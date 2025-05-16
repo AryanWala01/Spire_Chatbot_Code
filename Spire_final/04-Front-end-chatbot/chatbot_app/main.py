@@ -76,17 +76,17 @@ chat_interface = gr.ChatInterface(
     theme=theme,
     retry_btn=None,
     undo_btn=None,
-    clear_btn="Clear"
+    clear_btn="Clear",
 )
 
 # Create the Gradio blocks
-demo = gr.Blocks(title="Spire Chatbot")
+demo = gr.Blocks()
 with demo:
     header_html.render()
     chat_interface.render()
 
 # Queue Gradio app and mount it with FastAPI
-demo.queue(default_concurrency_limit=100)
+# demo.queue(default_concurrency_limit=100)
 
 # Pass the request object as a dependency to the Gradio app
 app = gr.mount_gradio_app(app, demo, path="/")

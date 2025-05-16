@@ -24,6 +24,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from transformers import OpenAIGPTTokenizer
 from pyspark.sql.types import ArrayType, StringType
 
+
 # Initialize tokenizer
 tokenizer = OpenAIGPTTokenizer.from_pretrained("openai-gpt")
 
@@ -142,7 +143,7 @@ def CreateIndex(tablename:str, catalog:str, db:str):
 
 # COMMAND ----------
 
-tables = [source_table]
+tables = [source_table_name]
 for table in tables:
     #Store data on the that table
     StoreDataOnChunkedTable(table, default_schema, default_catalog)

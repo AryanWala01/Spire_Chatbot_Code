@@ -114,11 +114,11 @@ except:
 # MAGIC     theme=theme,
 # MAGIC     retry_btn=None,
 # MAGIC     undo_btn=None,
-# MAGIC     clear_btn="Clear"
+# MAGIC     clear_btn="Clear",
 # MAGIC )
 # MAGIC
 # MAGIC # Create the Gradio blocks
-# MAGIC demo = gr.Blocks(title="Spire Chatbot")
+# MAGIC demo = gr.Blocks()
 # MAGIC with demo:
 # MAGIC     header_html.render()
 # MAGIC     chat_interface.render()

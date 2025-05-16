@@ -5,4 +5,4 @@ command:
 - '1'
 env:
 - name: MODEL_SERVING_ENDPOINT
-  value: agents_spire_catalog-spire_schema-spire_rag_final_1
+  value: agents_spire_catalog-spire_schema-spire_rag_final
